@@ -2,8 +2,8 @@
 
 Welcome to my **DSA 450 Sheet Solution in C++** solution repository! This repository contains well-structured, optimized **C++** solutions to the **DSA 450 Sheet**.
 
-## 📌 **About LeetCode 100** 
-The **Top 100 Liked Questions** on LeetCode are carefully selected problems that are widely appreciated by the coding community. These problems cover a diverse range of topics, making them essential for:
+## 📌 **About DSA 450 Sheet** 
+The **DSA 450 Sheet** has selected problems that are widely appreciated by the coding community. These problems cover a diverse range of topics, making them essential for:
 
 - Technical interviews
 - Competitive programming
