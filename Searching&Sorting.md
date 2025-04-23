@@ -4,6 +4,7 @@
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 pair<int, int> findFirstLast(vector<int>& arr, int target) {
     int first = -1, last = -1;
     int left = 0, right = arr.size() - 1;
@@ -34,6 +35,7 @@ pair<int, int> findFirstLast(vector<int>& arr, int target) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int findFixedPoint(vector<int>& arr) {
     int left = 0, right = arr.size() - 1;
     while (left <= right) {
@@ -52,6 +54,7 @@ int findFixedPoint(vector<int>& arr) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int searchRotated(vector<int>& arr, int target) {
     int left = 0, right = arr.size() - 1;
     while (left <= right) {
@@ -75,6 +78,7 @@ int searchRotated(vector<int>& arr, int target) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int sqrt(int x) {
     if (x == 0) return 0;
     long long left = 1, right = x;
@@ -95,6 +99,7 @@ int sqrt(int x) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 pair<int, int> findMinMax(vector<int>& arr) {
     int n = arr.size(), i = 0;
     int minVal = INT_MAX, maxVal = INT_MIN;
@@ -130,6 +135,7 @@ pair<int, int> findMinMax(vector<int>& arr) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 double minTotalDistance(vector<int>& points) {
     sort(points.begin(), points.end());
     int n = points.size();
@@ -148,6 +154,7 @@ double minTotalDistance(vector<int>& points) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 pair<int, int> findRepeatingMissing(vector<int>& arr) {
     int n = arr.size(), xor1 = 0, x = 0, y = 0;
     for (int i = 0; i < n; i++) xor1 ^= arr[i];
@@ -174,6 +181,7 @@ pair<int, int> findRepeatingMissing(vector<int>& arr) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int majorityElement(vector<int>& arr) {
     int count = 0, candidate = 0;
     for (int num : arr) {
@@ -192,6 +200,7 @@ int majorityElement(vector<int>& arr) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int searchWithDiffK(vector<int>& arr, int target, int k) {
     int n = arr.size(), i = 0;
     while (i < n) {
@@ -209,6 +218,7 @@ int searchWithDiffK(vector<int>& arr, int target, int k) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 bool findPairWithDiff(vector<int>& arr, int diff) {
     sort(arr.begin(), arr.end());
     int i = 0, j = 1, n = arr.size();
@@ -227,6 +237,7 @@ bool findPairWithDiff(vector<int>& arr, int diff) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 vector<vector<int>> findQuadruplets(vector<int>& arr, int target) {
     sort(arr.begin(), arr.end());
     int n = arr.size();
@@ -255,6 +266,7 @@ vector<vector<int>> findQuadruplets(vector<int>& arr, int target) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int maxSumNoAdjacent(vector<int>& arr) {
     int n = arr.size(), incl = arr[0], excl = 0;
     for (int i = 1; i < n; i++) {
@@ -272,6 +284,7 @@ int maxSumNoAdjacent(vector<int>& arr) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int countTriplets(vector<int>& arr, int target) {
     sort(arr.begin(), arr.end());
     int n = arr.size(), count = 0;
@@ -297,6 +310,7 @@ int countTriplets(vector<int>& arr, int target) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 void mergeSortedArrays(vector<int>& arr1, vector<int>& arr2) {
     int n = arr1.size(), m = arr2.size();
     for (int i = 0; i < n; i++) {
@@ -318,6 +332,7 @@ void mergeSortedArrays(vector<int>& arr1, vector<int>& arr2) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 vector<pair<int, int>> findSubarraysWithZeroSum(vector<int>& arr) {
     vector<pair<int, int>> result;
     unordered_map<long long, vector<int>> mp;
@@ -342,6 +357,7 @@ vector<pair<int, int>> findSubarraysWithZeroSum(vector<int>& arr) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 vector<long long> productExceptSelf(vector<int>& arr) {
     int n = arr.size();
     vector<long long> result(n, 1);
@@ -365,6 +381,7 @@ vector<long long> productExceptSelf(vector<int>& arr) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int countSetBits(int num) {
     int count = 0;
     while (num) {
@@ -388,6 +405,7 @@ void sortBySetBits(vector<int>& arr) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 vector<int> bishuAndSoldiers(vector<int>& powers, vector<int>& queries) {
     sort(powers.begin(), powers.end());
     int n = powers.size();
@@ -409,6 +427,7 @@ vector<int> bishuAndSoldiers(vector<int>& powers, vector<int>& queries) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int rastaAndKheshtak(vector<int>& arr1, vector<int>& arr2) {
     unordered_set<int> s1(arr1.begin(), arr1.end());
     unordered_set<int> s2(arr2.begin(), arr2.end());
@@ -428,6 +447,7 @@ int rastaAndKheshtak(vector<int>& arr1, vector<int>& arr2) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 long long kthSmallestInRanges(vector<pair<long long, long long>>& ranges, long long k) {
     sort(ranges.begin(), ranges.end());
     vector<pair<long long, long long>> merged;
@@ -456,6 +476,7 @@ long long kthSmallestInRanges(vector<pair<long long, long long>>& ranges, long l
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int findPivot(vector<int>& arr) {
     int left = 0, right = arr.size() - 1;
     while (left <= right) {
@@ -475,6 +496,7 @@ int findPivot(vector<int>& arr) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int kthElement(vector<int>& arr1, vector<int>& arr2, int k) {
     int n1 = arr1.size(), n2 = arr2.size();
     if (n1 > n2) return kthElement(arr2, arr1, k);
@@ -504,6 +526,7 @@ int kthElement(vector<int>& arr1, vector<int>& arr2, int k) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 bool canPlaceCows(vector<int>& stalls, int k, int dist) {
     int count = 1, last = stalls[0];
     for (int i = 1; i < stalls.size(); i++) {
@@ -536,6 +559,7 @@ int aggressiveCows(vector<int>& stalls, int k) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 bool canAllocate(vector<int>& pages, int students, int maxPages) {
     int count = 1, currPages = 0;
     for (int page : pages) {
@@ -570,6 +594,7 @@ int bookAllocation(vector<int>& pages, int students) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 struct Job {
     int id, deadline, profit;
 };
@@ -599,6 +624,7 @@ int jobScheduling(vector<Job>& jobs) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int findMissingInAP(vector<int>& arr) {
     int n = arr.size();
     int d = (arr[n - 1] - arr[0]) / n;
@@ -620,6 +646,7 @@ int findMissingInAP(vector<int>& arr) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 long long smallestNumberWithTrailingZeroes(int n) {
     long long left = 0, right = 5LL * n, ans = -1;
     while (left <= right) {
@@ -646,6 +673,7 @@ long long smallestNumberWithTrailingZeroes(int n) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 bool canPaint(vector<int>& boards, int painters, long long maxTime) {
     int count = 1;
     long long currTime = 0;
@@ -681,6 +709,7 @@ long long paintersPartition(vector<int>& boards, int painters) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 bool canMakePrata(vector<int>& ranks, int prata, long long time) {
     int count = 0;
     for (int rank : ranks) {
@@ -715,6 +744,7 @@ long long minTimeForPrata(vector<int>& ranks, int prata) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 long long doubleHelix(vector<int>& arr1, vector<int>& arr2) {
     int i = 0, j = 0, n1 = arr1.size(), n2 = arr2.size();
     long long sum = 0, sum1 = 0, sum2 = 0;
@@ -741,6 +771,7 @@ long long doubleHelix(vector<int>& arr1, vector<int>& arr2) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 vector<long long> subsetSums(vector<int>& arr) {
     vector<long long> sums;
     int n = arr.size();
@@ -761,6 +792,7 @@ vector<long long> subsetSums(vector<int>& arr) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 long long merge(vector<int>& arr, int left, int mid, int right) {
     vector<int> temp(right - left + 1);
     long long inv = 0;
@@ -790,6 +822,7 @@ long long countInversions(vector<int>& arr, int left, int right) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 void mergeInPlace(vector<int>& arr, int left, int mid, int right) {
     int i = left, j = mid + 1;
     while (i <= mid && j <= right) {
@@ -824,6 +857,7 @@ void mergeSortInPlace(vector<int>& arr, int left, int right) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 void dutchNationalFlag(vector<int>& arr) {
     int low = 0, mid = 0, high = arr.size() - 1;
     while (mid <= high) {

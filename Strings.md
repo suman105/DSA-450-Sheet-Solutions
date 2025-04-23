@@ -4,6 +4,7 @@
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 void reverseString(string& s) {
     int left = 0, right = s.length() - 1;
     while (left < right) {
@@ -18,6 +19,7 @@ void reverseString(string& s) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 bool isPalindrome(string s) {
     int left = 0, right = s.length() - 1;
     while (left < right) {
@@ -33,6 +35,7 @@ bool isPalindrome(string s) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 vector<char> findDuplicates(string s) {
     unordered_map<char, int> mp;
     vector<char> result;
@@ -50,6 +53,7 @@ vector<char> findDuplicates(string s) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 // Demonstrating immutability concept in C++ (strings are mutable in C++)
 void demonstrateImmutability() {
     string s = "hello";
@@ -64,6 +68,7 @@ void demonstrateImmutability() {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 bool isRotation(string s1, string s2) {
     if (s1.length() != s2.length()) return false;
     string temp = s1 + s1;
@@ -77,6 +82,7 @@ bool isRotation(string s1, string s2) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 bool isValidShuffle(string s1, string s2, string result) {
     if (s1.length() + s2.length() != result.length()) return false;
     int i = 0, j = 0, k = 0;
@@ -96,6 +102,7 @@ bool isValidShuffle(string s1, string s2, string result) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 string countAndSay(int n) {
     if (n == 1) return "1";
     string prev = countAndSay(n - 1);
@@ -119,6 +126,7 @@ string countAndSay(int n) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 string longestPalindrome(string s) {
     int n = s.length(), start = 0, maxLen = 1;
     for (int i = 0; i < n; i++) {
@@ -149,6 +157,7 @@ string longestPalindrome(string s) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int lrs(string s) {
     int n = s.length();
     vector<vector<int>> dp(n + 1, vector<int>(n + 1, 0));
@@ -171,6 +180,7 @@ int lrs(string s) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 void printSubsequences(string s, string curr = "", int i = 0) {
     if (i == s.length()) {
         if (!curr.empty()) cout << curr << endl;
@@ -187,6 +197,7 @@ void printSubsequences(string s, string curr = "", int i = 0) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 void permute(string& s, int l, int r) {
     if (l == r) cout << s << endl;
     for (int i = l; i <= r; i++) {
@@ -203,6 +214,7 @@ void permute(string& s, int l, int r) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int countSplits(string s) {
     int n = s.length(), count = 0;
     for (int i = 1; i < n; i++) {
@@ -222,6 +234,7 @@ int countSplits(string s) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 void wordWrap(vector<int>& words, int k) {
     int n = words.size();
     vector<int> dp(n + 1, INT_MAX), cost(n + 1, 0);
@@ -245,6 +258,7 @@ void wordWrap(vector<int>& words, int k) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int minEditDistance(string s1, string s2) {
     int m = s1.length(), n = s2.length();
     vector<vector<int>> dp(m + 1, vector<int>(n + 1));
@@ -266,6 +280,7 @@ int minEditDistance(string s1, string s2) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 string nextGreater(string s) {
     int n = s.length(), i = n - 2;
     while (i >= 0 && s[i] >= s[i+1]) i--;
@@ -284,6 +299,7 @@ string nextGreater(string s) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 bool isBalanced(string s) {
     stack<char> st;
     for (char c : s) {
@@ -303,6 +319,7 @@ bool isBalanced(string s) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 bool wordBreak(string s, vector<string>& dict) {
     unordered_set<string> st(dict.begin(), dict.end());
     int n = s.length();
@@ -326,6 +343,7 @@ bool wordBreak(string s, vector<string>& dict) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 void rabinKarp(string text, string pat, int q = 101) {
     int d = 256, m = pat.length(), n = text.length(), h = 1;
     for (int i = 0; i < m - 1; i++) h = (h * d) % q;
@@ -359,6 +377,7 @@ void rabinKarp(string text, string pat, int q = 101) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 vector<int> computeLPS(string pat) {
     int m = pat.length();
     vector<int> lps(m, 0);
@@ -394,6 +413,7 @@ void KMP(string text, string pat) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 string keypadSequence(string s) {
     string keypad[] = {"2", "22", "222", "3", "33", "333", "4", "44", "444", "5", "55", "555",
                        "6", "66", "666", "7", "77", "777", "7777", "8", "88", "888", "9", "99", "999", "9999"};
@@ -412,6 +432,7 @@ string keypadSequence(string s) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int minReversals(string s) {
     if (s.length() % 2) return -1;
     stack<char> st;
@@ -433,6 +454,7 @@ int minReversals(string s) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int countPalindromicSubsequences(string s) {
     int n = s.length(), mod = 1e9 + 7;
     vector<vector<long long>> dp(n, vector<long long>(n, 0));
@@ -457,6 +479,7 @@ int countPalindromicSubsequences(string s) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int countString(vector<vector<char>>& grid, string word) {
     int m = grid.size(), n = grid[0].size(), k = word.length(), count = 0;
     int dx[] = {0, 0, 1, -1, 1, 1, -1, -1};
@@ -486,6 +509,7 @@ int countString(vector<vector<char>>& grid, string word) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 bool searchWord(vector<vector<char>>& grid, string word, int i, int j, int m, int n) {
     int dx[] = {0, 0, 1, -1, 1, 1, -1, -1};
     int dy[] = {1, -1, 0, 0, 1, -1, 1, -1};
@@ -517,6 +541,7 @@ bool findWord(vector<vector<char>>& grid, string word) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 void boyerMoore(string text, string pat) {
     int m = pat.length(), n = text.length();
     vector<int> badChar(256, -1);
@@ -541,6 +566,7 @@ void boyerMoore(string text, string pat) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int romanToDecimal(string s) {
     unordered_map<char, int> mp = {{'I', 1}, {'V', 5}, {'X', 10}, {'L', 50}, {'C', 100}, {'D', 500}, {'M', 1000}};
     int result = 0;
@@ -561,6 +587,7 @@ int romanToDecimal(string s) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 string longestCommonPrefix(vector<string>& strs) {
     if (strs.empty()) return "";
     string prefix = strs[0];
@@ -580,6 +607,7 @@ string longestCommonPrefix(vector<string>& strs) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int minFlips(string s) {
     int n = s.length(), flip1 = 0, flip2 = 0;
     for (int i = 0; i < n; i++) {
@@ -596,6 +624,7 @@ int minFlips(string s) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 string firstRepeatedWord(string s) {
     unordered_set<string> seen;
     string word;
@@ -614,6 +643,7 @@ string firstRepeatedWord(string s) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int minSwaps(string s) {
     int imbalance = 0, swaps = 0;
     for (char c : s) {
@@ -631,6 +661,7 @@ int minSwaps(string s) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int longestCommonSubsequence(string s1, string s2) {
     int m = s1.length(), n = s2.length();
     vector<vector<int>> dp(m + 1, vector<int>(n + 1, 0));
@@ -650,6 +681,7 @@ int longestCommonSubsequence(string s1, string s2) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 vector<string> restoreIpAddresses(string s) {
     vector<string> result;
     int n = s.length();
@@ -675,6 +707,7 @@ vector<string> restoreIpAddresses(string s) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 string smallestWindow(string s) {
     int n = s.length();
     unordered_set<char> unique(s.begin(), s.end());
@@ -704,6 +737,7 @@ string smallestWindow(string s) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 string rearrangeString(string s) {
     unordered_map<char, int> mp;
     for (char c : s) mp[c]++;
@@ -728,6 +762,7 @@ string rearrangeString(string s) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 vector<int> computeLPS(string s) {
     int n = s.length();
     vector<int> lps(n, 0);

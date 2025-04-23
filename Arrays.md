@@ -4,6 +4,7 @@
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 void reverseArray(vector<int>& arr) {
     int left = 0, right = arr.size() - 1;
     while (left < right) {
@@ -18,6 +19,7 @@ void reverseArray(vector<int>& arr) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 pair<int, int> findMinMax(vector<int>& arr) {
     int minVal = arr[0], maxVal = arr[0];
     for (int i = 1; i < arr.size(); i++) {
@@ -34,6 +36,7 @@ pair<int, int> findMinMax(vector<int>& arr) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 pair<int, int> findKthMinMax(vector<int>& arr, int k) {
     priority_queue<int> maxHeap; // For kth min
     priority_queue<int, vector<int>, greater<int>> minHeap; // For kth max
@@ -53,6 +56,7 @@ pair<int, int> findKthMinMax(vector<int>& arr, int k) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 void sort012(vector<int>& arr) {
     int low = 0, mid = 0, high = arr.size() - 1;
     while (mid <= high) {
@@ -69,6 +73,7 @@ void sort012(vector<int>& arr) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 void moveNegatives(vector<int>& arr) {
     int left = 0, right = arr.size() - 1;
     while (left <= right) {
@@ -85,6 +90,7 @@ void moveNegatives(vector<int>& arr) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 void findUnionIntersection(vector<int>& arr1, vector<int>& arr2) {
     vector<int> unionArr, intersection;
     int i = 0, j = 0;
@@ -109,6 +115,7 @@ void findUnionIntersection(vector<int>& arr1, vector<int>& arr2) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 void rotateByOne(vector<int>& arr) {
     int last = arr.back();
     for (int i = arr.size() - 1; i > 0; i--) {
@@ -124,6 +131,7 @@ void rotateByOne(vector<int>& arr) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int maxSubArraySum(vector<int>& arr) {
     int currSum = arr[0], maxSum = arr[0];
     for (int i = 1; i < arr.size(); i++) {
@@ -140,6 +148,7 @@ int maxSubArraySum(vector<int>& arr) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int minMaxDiff(vector<int>& arr, int k) {
     sort(arr.begin(), arr.end());
     int n = arr.size(), ans = arr[n-1] - arr[0];
@@ -159,6 +168,7 @@ int minMaxDiff(vector<int>& arr, int k) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int minJumps(vector<int>& arr) {
     int n = arr.size();
     if (n <= 1) return 0;
@@ -183,6 +193,7 @@ int minJumps(vector<int>& arr) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int findDuplicate(vector<int>& arr) {
     int slow = arr[0], fast = arr[0];
     do {
@@ -204,6 +215,7 @@ int findDuplicate(vector<int>& arr) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 void mergeSortedArrays(vector<int>& arr1, vector<int>& arr2) {
     int n = arr1.size(), m = arr2.size();
     for (int i = 0; i < n; i++) {
@@ -225,6 +237,7 @@ void mergeSortedArrays(vector<int>& arr1, vector<int>& arr2) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int maxSubArraySum(vector<int>& arr) {
     int currSum = arr[0], maxSum = arr[0];
     for (int i = 1; i < arr.size(); i++) {
@@ -241,6 +254,7 @@ int maxSubArraySum(vector<int>& arr) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 vector<vector<int>> mergeIntervals(vector<vector<int>>& intervals) {
     sort(intervals.begin(), intervals.end());
     vector<vector<int>> result;
@@ -262,6 +276,7 @@ vector<vector<int>> mergeIntervals(vector<vector<int>>& intervals) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 void nextPermutation(vector<int>& arr) {
     int i = arr.size() - 2;
     while (i >= 0 && arr[i] >= arr[i+1]) i--;
@@ -280,6 +295,7 @@ void nextPermutation(vector<int>& arr) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 long long merge(vector<int>& arr, int left, int mid, int right) {
     vector<int> temp(right - left + 1);
     long long inv = 0;
@@ -309,6 +325,7 @@ long long countInversions(vector<int>& arr, int left, int right) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int maxProfit(vector<int>& prices) {
     int minPrice = INT_MAX, maxProfit = 0;
     for (int price : prices) {
@@ -325,6 +342,7 @@ int maxProfit(vector<int>& prices) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 vector<pair<int, int>> findPairs(vector<int>& arr, int sum) {
     unordered_map<int, int> mp;
     vector<pair<int, int>> result;
@@ -342,6 +360,7 @@ vector<pair<int, int>> findPairs(vector<int>& arr, int sum) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 vector<int> findCommon(vector<int>& arr1, vector<int>& arr2, vector<int>& arr3) {
     vector<int> result;
     int i = 0, j = 0, k = 0;
@@ -363,6 +382,7 @@ vector<int> findCommon(vector<int>& arr1, vector<int>& arr2, vector<int>& arr3) 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 void rearrangePosNeg(vector<int>& arr) {
     int n = arr.size();
     for (int i = 0; i < n; i++) {
@@ -382,6 +402,7 @@ void rearrangePosNeg(vector<int>& arr) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 bool subArrayZeroSum(vector<int>& arr) {
     unordered_set<long long> sumSet;
     long long sum = 0;
@@ -400,6 +421,7 @@ bool subArrayZeroSum(vector<int>& arr) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 vector<int> factorial(int n) {
     vector<int> result = {1};
     for (int i = 2; i <= n; i++) {
@@ -425,6 +447,7 @@ vector<int> factorial(int n) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 long long maxProduct(vector<int>& arr) {
     long long maxProd = arr[0], minProd = arr[0], result = arr[0];
     for (int i = 1; i < arr.size(); i++) {
@@ -443,6 +466,7 @@ long long maxProduct(vector<int>& arr) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int longestConsecutive(vector<int>& arr) {
     unordered_set<int> s(arr.begin(), arr.end());
     int maxLen = 0;
@@ -466,6 +490,7 @@ int longestConsecutive(vector<int>& arr) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 vector<int> majorityElement(vector<int>& arr, int k) {
     unordered_map<int, int> mp;
     vector<int> result;
@@ -483,6 +508,7 @@ vector<int> majorityElement(vector<int>& arr, int k) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int maxProfit(vector<int>& prices) {
     int n = prices.size();
     vector<int> first(n, 0), second(n, 0);
@@ -508,6 +534,7 @@ int maxProfit(vector<int>& prices) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 bool isSubset(vector<int>& arr1, vector<int>& arr2) {
     unordered_set<int> s(arr1.begin(), arr1.end());
     for (int x : arr2) {
@@ -523,6 +550,7 @@ bool isSubset(vector<int>& arr1, vector<int>& arr2) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 bool findTriplet(vector<int>& arr, int sum) {
     sort(arr.begin(), arr.end());
     int n = arr.size();
@@ -545,6 +573,7 @@ bool findTriplet(vector<int>& arr, int sum) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int trapRainWater(vector<int>& height) {
     int n = height.size(), water = 0;
     int left = 0, right = n-1, leftMax = 0, rightMax = 0;
@@ -569,6 +598,7 @@ int trapRainWater(vector<int>& height) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int findMinDiff(vector<int>& arr, int m) {
     sort(arr.begin(), arr.end());
     int minDiff = INT_MAX;
@@ -585,6 +615,7 @@ int findMinDiff(vector<int>& arr, int m) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int smallestSubarray(vector<int>& arr, int x) {
     int n = arr.size(), currSum = 0, minLen = n + 1;
     int start = 0;
@@ -605,6 +636,7 @@ int smallestSubarray(vector<int>& arr, int x) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 void threeWayPartition(vector<int>& arr, int a, int b) {
     int n = arr.size(), low = 0, mid = 0, high = n - 1;
     while (mid <= high) {
@@ -621,6 +653,7 @@ void threeWayPartition(vector<int>& arr, int a, int b) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int minSwaps(vector<int>& arr, int k) {
     int n = arr.size(), count = 0;
     for (int x : arr) if (x <= k) count++;
@@ -642,6 +675,7 @@ int minSwaps(vector<int>& arr, int k) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int minOperations(vector<int>& arr) {
     int n = arr.size(), operations = 0;
     int i = 0, j = n - 1;
@@ -666,6 +700,7 @@ int minOperations(vector<int>& arr) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 double findMedianSortedArrays(vector<int>& arr1, vector<int>& arr2) {
     int n = arr1.size();
     int low = 0, high = n;
@@ -694,6 +729,7 @@ double findMedianSortedArrays(vector<int>& arr1, vector<int>& arr2) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 double findMedianSortedArrays(vector<int>& arr1, vector<int>& arr2) {
     if (arr2.size() < arr1.size()) return findMedianSortedArrays(arr2, arr1);
     int n1 = arr1.size(), n2 = arr2.size();

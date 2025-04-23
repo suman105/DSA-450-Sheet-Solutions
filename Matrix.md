@@ -4,6 +4,7 @@
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 vector<int> spiralOrder(vector<vector<int>>& matrix) {
     vector<int> result;
     if (matrix.empty()) return result;
@@ -33,6 +34,7 @@ vector<int> spiralOrder(vector<vector<int>>& matrix) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 bool searchMatrix(vector<vector<int>>& matrix, int target) {
     if (matrix.empty()) return false;
     int m = matrix.size(), n = matrix[0].size();
@@ -52,6 +54,7 @@ bool searchMatrix(vector<vector<int>>& matrix, int target) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int findMedian(vector<vector<int>>& matrix) {
     int m = matrix.size(), n = matrix[0].size();
     int low = 1, high = 1e9;
@@ -74,6 +77,7 @@ int findMedian(vector<vector<int>>& matrix) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int rowWithMax1s(vector<vector<int>>& matrix) {
     int m = matrix.size(), n = matrix[0].size();
     int maxRow = -1, maxCount = 0, col = n - 1, row = 0;
@@ -99,6 +103,7 @@ int rowWithMax1s(vector<vector<int>>& matrix) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 vector<int> sortedMatrix(vector<vector<int>>& matrix) {
     int m = matrix.size(), n = matrix[0].size();
     priority_queue<pair<int, pair<int, int>>, vector<pair<int, pair<int, int>>>, greater<>> pq;
@@ -120,6 +125,7 @@ vector<int> sortedMatrix(vector<vector<int>>& matrix) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int maxAreaHistogram(vector<int>& heights) {
     stack<int> s;
     int maxArea = 0, n = heights.size();
@@ -152,6 +158,7 @@ int maxRectangle(vector<vector<int>>& matrix) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int findMaxDiff(vector<vector<int>>& matrix) {
     int m = matrix.size(), n = matrix[0].size();
     int maxDiff = INT_MIN;
@@ -176,6 +183,7 @@ int findMaxDiff(vector<vector<int>>& matrix) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 void rotateMatrix(vector<vector<int>>& matrix) {
     int n = matrix.size();
     for (int i = 0; i < n; i++) {
@@ -195,6 +203,7 @@ void rotateMatrix(vector<vector<int>>& matrix) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int kthSmallest(vector<vector<int>>& matrix, int k) {
     int n = matrix.size();
     priority_queue<int, vector<int>, greater<int>> pq;
@@ -214,6 +223,7 @@ int kthSmallest(vector<vector<int>>& matrix, int k) {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 vector<int> findCommonElements(vector<vector<int>>& matrix) {
     int m = matrix.size(), n = matrix[0].size();
     unordered_map<int, int> mp;
